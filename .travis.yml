@@ -6,4 +6,4 @@ before_install:
   - docker build -t invincible0305/docker-react  -f Dockerfile.dev .
 
 script:
-  - docker run invincible0305/docker-react npm run test -- --coverage
+  - docker run -e CI=true invincible0305/docker-react npm run test
